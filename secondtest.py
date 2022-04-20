@@ -218,8 +218,8 @@ if not video.isOpened():
     sys.exit()
 
 
-# Read first frame.
-ok0, frame0 = video.read()
+#0 Read first frame.
+"""ok0, frame0 = video.read()
 if not ok0:
     print ('Cannot read video file')
     sys.exit()                                  # Does script crash during this command??
@@ -237,7 +237,10 @@ if not ok1:
 bbox1 = (287, 23, 86, 320)
 
 time.sleep(3)
-
+"""
+loadDelay = 20
+for i in range(loadDelay)
+    ok, frame = video.read()
 # Read third frame.
 ok, frame = video.read()
 if not ok:
