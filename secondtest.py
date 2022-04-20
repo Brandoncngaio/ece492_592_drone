@@ -238,21 +238,18 @@ bbox1 = (287, 23, 86, 320)
 
 time.sleep(3)
 """
-loadDelay = 120
-for i in range(loadDelay):
-    ok, frame = video.read()
 # Read third frame.
 ok, frame = video.read()
 if not ok:
     print ('Cannot read video file')
     sys.exit()                                  # Does script crash during this command??
 # Define an initial bounding box
-bbox = (287, 23, 86, 320)
+bbox = (287, 43, 154, 320) #changed box size
 
 
 # Uncomment the line below to select a different bounding box
-bbox = cv2.selectROI(frame, False)
-cv2.destroyAllWindows()
+#bbox = cv2.selectROI(frame, False)
+#cv2.destroyAllWindows()
 
 # Initialize tracker with first frame and bounding box
 ok = tracker.init(frame, bbox)
