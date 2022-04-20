@@ -277,7 +277,7 @@ def trackFrame(video, bbox):
         x_error = x_image_width / 2 - object_location_x
         y_error = y_image_width / 2 - object_location_y
         
-        cv2.imshow("Tracking", frame)s
+        cv2.imshow("Tracking", frame)
 
 
     else :
