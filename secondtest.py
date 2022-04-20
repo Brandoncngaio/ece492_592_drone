@@ -239,7 +239,7 @@ bbox1 = (287, 23, 86, 320)
 time.sleep(3)
 """
 loadDelay = 20
-for i in range(loadDelay)
+for i in range(loadDelay):
     ok, frame = video.read()
 # Read third frame.
 ok, frame = video.read()
