@@ -219,16 +219,26 @@ if not video.isOpened():
 
 
 # Read first frame.
-ok, frame = video.read()
-if not ok:
+ok0, frame0 = video.read()
+if not ok0:
     print ('Cannot read video file')
     sys.exit()                                  # Does script crash during this command??
 # Define an initial bounding box
-bbox = (287, 23, 86, 320)
+bbox0 = (287, 23, 86, 320)
 
 time.sleep(3)
 
 # Read second frame.
+ok1, frame1 = video.read()
+if not ok1:
+    print ('Cannot read video file')
+    sys.exit()                                  # Does script crash during this command??
+# Define an initial bounding box
+bbox1 = (287, 23, 86, 320)
+
+time.sleep(3)
+
+# Read third frame.
 ok, frame = video.read()
 if not ok:
     print ('Cannot read video file')
