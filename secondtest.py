@@ -348,11 +348,14 @@ try:
                 0, # yaw rate
                 hover_thrust  # thrust (0-1 where 0.5 is no vertical velocity)
             )
+            
             if(controlVehicle):
+                print("About to send a quarternion command")
                 vehicle.send_mavlink(msg)             # This is commented for initial testing, we don't want the drone to be controlled at first
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 controlVehicle = true
+                print("controlVehicle now true")
                 
                 
         else:
