@@ -34,6 +34,7 @@ if __name__ == '__main__' :
 # Read video
 #video = cv2.VideoCapture("ski1.mp4")
 video = cv2.VideoCapture(0) # for using CAM
+video.set(cv2.CAP_PROP_EXPOSURE, -4)
 
 # Exit if video not opened.
 if not video.isOpened():
@@ -49,12 +50,12 @@ if not ok:
 bbox = (287, 23, 86, 320)
 
 time.sleep(3)
-"""
+
 
 loadDelay = 120
 for i in range(loadDelay):
     ok, frame = video.read()
- 
+""" 
 # Read second frame.
 ok, frame = video.read()
 if not ok:
