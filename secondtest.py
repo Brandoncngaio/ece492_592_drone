@@ -226,6 +226,17 @@ if not ok:
 # Define an initial bounding box
 bbox = (287, 23, 86, 320)
 
+time.sleep(3)
+
+# Read second frame.
+ok, frame = video.read()
+if not ok:
+    print ('Cannot read video file')
+    sys.exit()                                  # Does script crash during this command??
+# Define an initial bounding box
+bbox = (287, 23, 86, 320)
+
+
 # Uncomment the line below to select a different bounding box
 bbox = cv2.selectROI(frame, False)
 cv2.destroyAllWindows()
