@@ -32,7 +32,7 @@ if __name__ == '__main__' :
             tracker = cv2.TrackerCSRT_create()
 # Read video
 #video = cv2.VideoCapture("ski1.mp4")
-video = cv2.VideoCapture(1) # for using CAM
+video = cv2.VideoCapture(0) # for using CAM
 
 # Exit if video not opened.
 if not video.isOpened():
@@ -40,6 +40,16 @@ if not video.isOpened():
     sys.exit()
 
 # Read first frame.
+ok, frame = video.read()
+if not ok:
+    print ('Cannot read video file')
+    sys.exit()
+# Define an initial bounding box
+bbox = (287, 23, 86, 320)
+
+time.sleep(3)
+
+# Read second frame.
 ok, frame = video.read()
 if not ok:
     print ('Cannot read video file')
