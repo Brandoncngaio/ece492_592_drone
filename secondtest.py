@@ -354,7 +354,7 @@ try:
                 vehicle.send_mavlink(msg)             # This is commented for initial testing, we don't want the drone to be controlled at first
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                controlVehicle = true
+                controlVehicle = True
                 print("controlVehicle now true")
                 
                 
