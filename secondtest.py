@@ -189,7 +189,7 @@ import cv2
 import sys
 import time
 
-bool controlVehicle = false 
+controlVehicle = False 
 
 (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.')
  
@@ -329,7 +329,7 @@ try:
         derivative = [(a_i - b_i) / iteration_time for a_i, b_i in zip(error, error_prior)]
         output = [Kp*a_i + Ki*b_i + Kd*c_i + bias for a_i, b_i, c_i in zip(error, integral, derivative)]
         
-        if(trackerWorking == True):
+        if (trackerWorking == True):
             # generate mavlink message to send attitude setpoint
             new_quat = to_quaternion(output[0], output[1], target_yaw)
             print("Output 0: ", output[0])
