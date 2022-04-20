@@ -34,7 +34,7 @@ if __name__ == '__main__' :
 # Read video
 #video = cv2.VideoCapture("ski1.mp4")
 video = cv2.VideoCapture(0) # for using CAM
-video.set(cv2.CAP_PROP_EXPOSURE, -4)
+video.set(cv2.CAP_PROP_EXPOSURE, -10)
 
 # Exit if video not opened.
 if not video.isOpened():
