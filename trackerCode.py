@@ -41,7 +41,7 @@ if not video.isOpened():
     sys.exit()
 
 # Read first frame.
-ok, frame = video.read()
+"""ok, frame = video.read()
 if not ok:
     print ('Cannot read video file')
     sys.exit()
@@ -49,7 +49,12 @@ if not ok:
 bbox = (287, 23, 86, 320)
 
 time.sleep(3)
+"""
 
+loadDelay = 20
+for i in range(loadDelay)
+    ok, frame = video.read()
+ 
 # Read second frame.
 ok, frame = video.read()
 if not ok:
