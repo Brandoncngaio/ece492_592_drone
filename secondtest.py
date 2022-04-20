@@ -189,6 +189,8 @@ import cv2
 import sys
 import time
 
+bool controlVehicle = false 
+
 (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.')
  
  
@@ -345,10 +347,13 @@ try:
                 hover_thrust  # thrust (0-1 where 0.5 is no vertical velocity)
             )
             # vehicle.send_mavlink(msg)             # This is commented for initial testing, we don't want the drone to be controlled at first
+            
+            if cv2.waitKey(1) &
         else:
             # Return to launch if lost the object
             vehicle.mode = VehicleMode("RTL")
 
+            
         time.sleep(iteration_time)
 except KeyboardInterrupt:
     print('exiting')
