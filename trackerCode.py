@@ -52,7 +52,7 @@ time.sleep(3)
 """
 
 loadDelay = 20
-for i in range(loadDelay)
+for i in range(loadDelay):
     ok, frame = video.read()
  
 # Read second frame.
