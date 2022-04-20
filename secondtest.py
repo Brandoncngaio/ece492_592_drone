@@ -147,7 +147,6 @@ if vehicle.version.vehicle_type == mavutil.mavlink.MAV_TYPE_QUADROTOR:
     # yaw north
     condition_yaw(0)
     
-    time.sleep(10)
 
 
 def to_quaternion(roll = 0.0, pitch = 0.0, yaw = 0.0):
@@ -197,9 +196,6 @@ import time
 tracker = cv2.TrackerCSRT_create()
 # Read video
 video = cv2.VideoCapture(0) # for using CAM
-
-time.sleep(1)
-
 
 # Exit if video not opened.
 if not video.isOpened():
