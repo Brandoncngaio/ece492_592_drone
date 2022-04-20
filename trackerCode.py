@@ -63,7 +63,7 @@ if not ok:
     sys.exit()
 # Define an initial bounding box
 # bbox = (287, 43, 84, 320) # Tall and skinny
-box = (287, 43, 104, 320)
+bbox = (287, 43, 104, 320)
 
 # Uncomment the line below to select a different bounding box
 #bbox = cv2.selectROI(frame, False)
