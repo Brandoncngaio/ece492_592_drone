@@ -117,7 +117,7 @@ vehicle.mode = VehicleMode("GUIDED")
 # Read video
 video = cv2.VideoCapture(0) # for using CAM
 
-vehicle.parameters['WP_YAW_BEHAVIOR'] = 0
+#vehicle.parameters['WP_YAW_BEHAVIOR'] = 0
 
 if vehicle.version.vehicle_type == mavutil.mavlink.MAV_TYPE_QUADROTOR:
 
@@ -304,7 +304,7 @@ def get_location_metres(original_location, dNorth, dEast, altitude):
 target_yaw = 0 #math.degrees(90)
 print("Control begin in three seconds...")
 time.sleep(3)
-
+vehicle.parameters['WP_YAW_BEHAVIOR'] = 0 #===================================moved
 try:
     while run:
         ok, frame = video.read()
