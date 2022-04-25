@@ -391,10 +391,10 @@ try:
                     currentLocation=vehicle.location.global_relative_frame
                     targetLocation=get_location_metres(currentLocation, 0, -1, TARGET_ALTITUDE)
                     vehicle.simple_goto(targetLocation)
-                # elif(zone == 4):
-                #     currentLocation=vehicle.location.global_relative_frame
-                #     targetLocation=get_location_metres(currentLocation, 0, 0, TARGET_ALTITUDE)
-                #     vehicle.simple_goto(targetLocation)
+                elif(zone == 4):
+                    currentLocation=vehicle.location.global_relative_frame
+                    targetLocation=get_location_metres(currentLocation, 0, 0, TARGET_ALTITUDE)
+                    vehicle.simple_goto(targetLocation)
                 elif(zone == 5):
                     currentLocation=vehicle.location.global_relative_frame
                     targetLocation=get_location_metres(currentLocation, 0, 1, TARGET_ALTITUDE)
