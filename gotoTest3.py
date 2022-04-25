@@ -33,7 +33,7 @@ WAYPOINT_LIMIT = 1
 # Variable to keep track of if joystick to arm has returned to center
 rcin_4_center = False
 
-def condition_yaw(vehicle, heading, relative=False):
+def condition_yaw(heading, relative=False):
     """
     Send MAV_CMD_CONDITION_YAW message to point vehicle at a specified heading (in degrees).
 
