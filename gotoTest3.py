@@ -14,7 +14,7 @@ import math
 import time
 import sys
 from unittest import case
-# from dronekit import connect, VehicleMode, LocationGlobalRelative
+from dronekit import connect, VehicleMode, LocationGlobalRelative
 import dronekit
 from pymavlink import mavutil
 import cv2
