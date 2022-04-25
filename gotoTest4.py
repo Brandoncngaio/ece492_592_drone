@@ -379,50 +379,48 @@ try:
 
 
         if (trackerWorking == True):
-            if (loopCounter >= 10):
-                loopCounter = 0
-                print("One second elapsed... issuing a goto command!")
-                if(zone == 0):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 1, -1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 1):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 1, 0, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 2):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 1, 1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 3):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 0, -1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 4):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 0, 0, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 5):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, 0, 1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 6):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, -1, -1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 7):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, -1, 0, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
-                elif(zone == 8):
-                    currentLocation=vehicle.location.global_relative_frame
-                    targetLocation=get_location_metres(currentLocation, -1, 1, TARGET_ALTITUDE)
-                    vehicle.simple_goto(targetLocation)
+            print("Issuing a goto command!")
+            if(zone == 0):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 1, -1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 1):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 1, 0, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 2):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 1, 1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 3):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 0, -1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 4):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 0, 0, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 5):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, 0, 1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 6):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, -1, -1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 7):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, -1, 0, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
+            elif(zone == 8):
+                currentLocation=vehicle.location.global_relative_frame
+                targetLocation=get_location_metres(currentLocation, -1, 1, TARGET_ALTITUDE)
+                vehicle.simple_goto(targetLocation)
             
                 
         else:
             controlVehicle = False
-            print("controlVehicle set false!")
+            print("controlVehicle false!")
             if (droneStopped == False):
                 currentLocation=vehicle.location.global_relative_frame
                 targetLocation=get_location_metres(currentLocation, 0, 0, TARGET_ALTITUDE)
@@ -430,11 +428,11 @@ try:
                 droneStopped = True
 
 
-        if cv2.waitKey(1) & 0xFF == ord('d'): # press 'c' to begin send attitude adjustment
+        if cv2.waitKey(1) & 0xFF == ord('d'): # press 'd' to begin send attitude adjustment
             controlVehicle = True
             print("controlVehicle has been set True")
 
-        if cv2.waitKey(1) & 0xFF == ord('x'): # press 'c' to stop send attitude adjustment
+        if cv2.waitKey(1) & 0xFF == ord('x'): # press 'x' to stop send attitude adjustment
             controlVehicle = False
             print("controlVehicle has been set False")
         
@@ -449,6 +447,8 @@ try:
             ok = tracker.init(frame, bbox)
             trackerWorking = True
             droneStopped = False
+            controlVehicle = True
+            print("controlVehicle has been set True")
 
         
         if cv2.waitKey(1) & 0xFF == ord('q'): # press 'q' to return to lauch!
