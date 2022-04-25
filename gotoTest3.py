@@ -108,7 +108,7 @@ print('Waiting for safety pilot to arm...')
 
 print("Setting parameter to always face north!")
 
-vehicle.parameters['WP_YAW_BEHAVIOR'] = 0
+#vehicle.parameters['WP_YAW_BEHAVIOR'] = 0
 print("Parameter set successfully!")
 
 # Wait until safety pilot arms drone
